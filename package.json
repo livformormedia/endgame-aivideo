@@ -1,0 +1,12 @@
+{
+  "name": "endgame-webhook",
+  "version": "1.0.0",
+  "description": "Stripe → FB CAPI Purchase + GHL tag update",
+  "private": true,
+  "dependencies": {
+    "stripe": "^14.25.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Training — The $0.06 AI Video System</title>
+<meta name="description" content="Watch the free 15-min training: the exact system to create AI video ads at $0.06/clip and cancel your platform subscriptions.">
+
+<!-- OG / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://endgameaivideo.com/training">
+<meta property="og:title" content="Free Training — The $0.06 AI Video System">
+<meta property="og:description" content="Watch the exact system that replaces Creatify, HeyGen, and Arcads at $0.06/clip. 15 minutes.">
+<meta property="og:image" content="https://endgameaivideo.com/endgame_hero_horizontal.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Training — The $0.06 AI Video System">
+<meta name="twitter:image" content="https://endgameaivideo.com/endgame_hero_horizontal.png">
+
+<!-- Facebook Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2159928257879426');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2159928257879426&ev=PageView&noscript=1"/></noscript>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* === NOTICE BAR === */
+  .notice-bar {
+    background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%);
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .notice-bar strong { color: #fde68a; }
+
+  /* === MAIN WRAPPER === */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 24px 120px;
+  }
+
+  /* === PRE-VIDEO HOOK === */
+  .pre-hook {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .pre-label {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(168, 85, 247, 0.8);
+    margin-bottom: 20px;
+  }
+
+  .pre-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+
+  .pre-headline .highlight {
+    background: linear-gradient(135deg, #c084fc 0%, #8b5cf6 50%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .pre-sub {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+
+  .pre-sub strong { color: #fff; font-weight: 600; }
+
+  .watch-cue {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(168, 85, 247, 0.9);
+    letter-spacing: 1px;
+  }
+
+  .watch-cue .arrow {
+    font-size: 20px;
+    animation: bounce-down 1.2s ease-in-out infinite;
+  }
+
+  @keyframes bounce-down {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* === VIDEO EMBED === */
+  .video-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #0a0a0a;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    box-shadow: 0 0 60px rgba(139, 92, 246, 0.12), 0 20px 60px rgba(0, 0, 0, 0.5);
+    margin-bottom: 48px;
+  }
+
+  .video-wrap iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+
+  /* === POST-VIDEO HOOK === */
+  .post-hook {
+    text-align: center;
+    padding: 48px 0 56px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .post-hook-label {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+  }
+
+  .post-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 4.5vw, 48px);
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+
+  .post-headline .red { color: #ef4444; }
+
+  .post-sub {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 300;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .post-sub strong { color: rgba(255,255,255,0.75); font-weight: 500; }
+
+  /* === TIMER-GATED CTA === */
+  .cta-gate {
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  /* Countdown state — visible for first 5 min */
+  .countdown-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .countdown-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.35);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .countdown-display {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, #a855f7, #6d28d9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+
+  .countdown-sub {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 300;
+  }
+
+  /* CTA state — hidden until timer fires */
+  .cta-state {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: fade-in-up 0.8s ease forwards;
+  }
+
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .cta-trigger-label {
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(168, 85, 247, 0.7);
+    font-weight: 500;
+  }
+
+  .cta-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 5vw, 52px);
+    letter-spacing: 1px;
+    line-height: 1;
+    color: #fff;
+  }
+
+  .cta-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 300;
+  }
+
+  .cta-price strong {
+    color: #a855f7;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .cta-price s {
+    color: rgba(255,255,255,0.2);
+    font-size: 14px;
+  }
+
+  .buy-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 48px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 0 60px rgba(139, 92, 246, 0.4), 0 8px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .buy-button::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.12) 50%, transparent 60%);
+    animation: shine 2.5s ease-in-out infinite;
+  }
+
+  @keyframes shine {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+  }
+
+  .buy-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 80px rgba(139, 92, 246, 0.55), 0 12px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .cta-trust {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .guarantee-line {
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    font-weight: 300;
+    max-width: 420px;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .guarantee-line strong {
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+  }
+
+  /* === WHAT'S INSIDE (below CTA) === */
+  .inside-section {
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .inside-label {
+    font-size: 13px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(168,85,247,0.6);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .inside-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(30px, 4vw, 44px);
+    letter-spacing: 2px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+
+  .inside-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .inside-item {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    padding: 24px 28px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .inside-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #a855f7;
+    box-shadow: 0 0 10px rgba(168,85,247,0.5);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  .inside-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .inside-text strong {
+    color: #fff;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  @media (max-width: 640px) {
+    .inside-grid { grid-template-columns: 1fr; }
+    .page { padding: 40px 16px 100px; }
+  }
+
+  /* === SOFT GATE OVERLAY === */
+  .gate-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(12px);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    animation: fade-in 0.4s ease;
+  }
+
+  .gate-overlay.active { display: flex; }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .gate-box {
+    background: #0a0a0a;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 20px;
+    padding: 48px 40px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 80px rgba(139, 92, 246, 0.15), 0 20px 60px rgba(0,0,0,0.6);
+    animation: slide-up 0.4s ease;
+  }
+
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .gate-label {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(168, 85, 247, 0.7);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  .gate-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 1px;
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .gate-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.45);
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .gate-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .gate-form input {
+    width: 100%;
+    padding: 16px 18px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .gate-form input:focus { border-color: rgba(168,85,247,0.5); }
+  .gate-form input::placeholder { color: rgba(255,255,255,0.3); }
+
+  .gate-submit {
+    width: 100%;
+    padding: 17px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+    transition: all 0.3s;
+  }
+
+  .gate-submit:hover { transform: translateY(-2px); box-shadow: 0 0 60px rgba(139,92,246,0.45); }
+
+  .gate-skip {
+    margin-top: 14px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.2);
+    cursor: pointer;
+    font-weight: 300;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .gate-skip:hover { color: rgba(255,255,255,0.4); }
+  .gate-trust { margin-top: 12px; font-size: 11px; color: rgba(255,255,255,0.2); }
+</style>
+</head>
+<body>
+
+<!-- SOFT GATE OVERLAY — shown if no opt-in detected -->
+<div class="gate-overlay" id="gateOverlay">
+  <div class="gate-box">
+    <p class="gate-label">Free Training</p>
+    <h2 class="gate-headline">ENTER YOUR EMAIL<br>TO WATCH FREE</h2>
+    <p class="gate-sub">The $0.06 system replacing $300/mo AI video tools — 15 minutes.</p>
+    <div class="gate-form" id="gateForm">
+      <input type="text" id="gateName" placeholder="First name">
+      <input type="email" id="gateEmail" placeholder="Email address">
+      <button class="gate-submit" id="gateSubmit">Watch the Training Free →</button>
+    </div>
+    <button class="gate-skip" id="gateSkip">I already opted in — let me through</button>
+    <p class="gate-trust">🔒 No spam. Unsubscribe anytime.</p>
+  </div>
+</div>
+
+<div class="notice-bar">
+  You're in. <strong>Watch the free training below</strong> — 15 minutes.
+</div>
+
+<div class="page">
+
+  <!-- PRE-VIDEO HOOK -->
+  <div class="pre-hook">
+    <p class="pre-label">Free Training</p>
+    <h1 class="pre-headline">THE SYSTEM EVERY<br>PLATFORM <span class="highlight">DOESN'T WANT</span><br>YOU TO FIND</h1>
+    <p class="pre-sub">
+      Every AI video tool you're paying for is a middleman. In the next 15 minutes, you'll see <strong>exactly how they mark up the same model 54–183x</strong> — and the system to bypass all of them.
+    </p>
+    <span class="watch-cue">Watch the training now <span class="arrow">↓</span></span>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="video-wrap">
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/7t2su8zgv6?autoPlay=false&controlsVisibleOnLoad=true&fullscreenButton=true&playbar=true&volumeControl=true&wmode=transparent"
+      allowtransparency="true"
+      frameborder="0"
+      scrolling="no"
+      allowfullscreen
+      mozallowfullscreen
+      webkitallowfullscreen
+      oallowfullscreen
+      msallowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- POST-VIDEO HOOK -->
+  <div class="post-hook">
+    <p class="post-hook-label">After watching</p>
+    <h2 class="post-headline">YOU ALREADY KNEW YOUR TOOLS<br>WERE <span class="red">OVERCHARGING YOU.</span><br>NOW YOU KNOW BY HOW MUCH.</h2>
+    <p class="post-sub">
+      The system above is live, working, and already producing ads that pass as real — at <strong>$0.06 per clip</strong>. The only question is whether you keep renting access to the middlemen.
+    </p>
+  </div>
+
+  <!-- TIMER-GATED CTA -->
+  <div class="cta-gate">
+
+    <!-- Countdown (visible for first 5 min) -->
+    <div class="countdown-state" id="countdownState">
+      <p class="countdown-label">Access unlocks in</p>
+      <div class="countdown-display" id="countdownDisplay">9:30</div>
+      <p class="countdown-sub">Watch the training while you wait.</p>
+    </div>
+
+    <!-- Buy CTA (hidden until timer fires) -->
+    <div class="cta-state" id="ctaState">
+      <p class="cta-trigger-label">Enrollment open</p>
+      <h2 class="cta-headline">GET THE FULL SYSTEM</h2>
+      <p class="cta-price"><strong>$397</strong> &nbsp;one-time &nbsp;·&nbsp; no subscription</p>
+      <a href="https://buy.stripe.com/8x25kv0Iq0753hkcNGdEs0h" target="_blank" class="buy-button" id="buyBtn">
+        Get Instant Access &rarr;
+      </a>
+      <p class="cta-trust">&#128274; Secure checkout &nbsp;·&nbsp; Instant delivery &nbsp;·&nbsp; 30-day guarantee</p>
+      <p class="guarantee-line"><strong>Cancel-One-Subscription Guarantee:</strong> build your first character, produce your first ad — if it's not good enough to cancel at least one platform subscription, full refund. No questions.</p>
+    </div>
+
+  </div>
+
+  <!-- WHAT'S INSIDE -->
+  <div class="inside-section">
+    <p class="inside-label">What you get</p>
+    <h3 class="inside-title">EVERYTHING IN THE SYSTEM</h3>
+    <div class="inside-grid">
+      <div class="inside-item">
+        <div class="inside-dot"></div>
+        <div class="inside-text">
+          <strong>6-Module Course</strong>
+          Video generation, prompt engineering, hyper-realism, voice locking, assembly pipeline, batch scaling.
+        </div>
+      </div>
+      <div class="inside-item">
+        <div class="inside-dot"></div>
+        <div class="inside-text">
+          <strong>Five Avatar Starter Pack</strong>
+          5 prebuilt characters with Character Bible, voice profiles. Generate immediately.
+        </div>
+      </div>
+      <div class="inside-item">
+        <div class="inside-dot"></div>
+        <div class="inside-text">
+          <strong>15 Scene Templates</strong>
+          Car confessions, bathroom mirrors, kitchen counters, gym selfies. Copy, paste, generate.
+        </div>
+      </div>
+      <div class="inside-item">
+        <div class="inside-dot"></div>
+        <div class="inside-text">
+          <strong>The Actual Prompts</strong>
+          Every prompt used daily — handed over directly. Not a framework. The prompts.
+        </div>
+      </div>
+      <div class="inside-item">
+        <div class="inside-dot"></div>
+        <div class="inside-text">
+          <strong>Banned Words List</strong>
+          One file. The words that make AI look fake + their replacements. Transforms every generation.
+        </div>
+      </div>
+      <div class="inside-item">
+        <div class="inside-dot"></div>
+        <div class="inside-text">
+          <strong>1-on-1 Onboarding Call</strong>
+          Personal call to get your first avatar built and your first ad out the door.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // === CONFIG ===
+  const PIXEL_ID   = '2159928257879426';
+  const CAPI_TOKEN = 'EAAU9JykAMVQBRJ0nKMAUjw8SvN5zhmpzbDbQuYZCCCZC5AUNlvPzQx6GNQP3WoBukTtpjaIABsL9fi6vHh6ZBBJOBFLMervveECreSBSeZBi2pKzlwwX3eaPv6olGZCCxlwmT1udZB6ZBCOmqHvxgK1kNiRnZBJ0rVkr5db1ZA3HbcAlMTuQIJ2EjGfYlbqs3Cxj9XwZDZD';
+  const GHL_TOKEN  = 'pit-0cefae17-b065-44da-959f-ef41333bab4e';
+  const GHL_LOC    = 'bNQj4Ti60XKt9BqMiCPE';
+  const GHL_FIELD_WATCH_MINS = 'NFr52diVw2eM7QpYXy4Y';
+
+  // SHA-256 (needed for gate form + CAPI)
+  async function sha256(str) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str.trim().toLowerCase()));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+  }
+
+  // GHL — look up contact ID by email, then add tag + update custom field
+  async function ghlUpdateContact(email, minutesWatched, tag) {
+    if (!email) return;
+    try {
+      // Step 1: find contact ID by email
+      const search = await fetch(
+        `https://services.leadconnectorhq.com/contacts/search?locationId=${GHL_LOC}&query=${encodeURIComponent(email)}`,
+        { headers: { 'Authorization': `Bearer ${GHL_TOKEN}`, 'Version': '2021-07-28' } }
+      );
+      const { contacts } = await search.json();
+      const contact = contacts?.find(c => c.email === email);
+      if (!contact) return;
+
+      const id = contact.id;
+
+      // Step 2: add tag (additive — does NOT replace existing tags)
+      fetch(`https://services.leadconnectorhq.com/contacts/${id}/tags`, {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${GHL_TOKEN}`, 'Version': '2021-07-28', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tags: [tag] })
+      }).catch(() => {});
+
+      // Step 3: update watch time custom field (only if provided)
+      if (minutesWatched !== null) {
+        fetch(`https://services.leadconnectorhq.com/contacts/${id}`, {
+          method: 'PUT',
+          headers: { 'Authorization': `Bearer ${GHL_TOKEN}`, 'Version': '2021-07-28', 'Content-Type': 'application/json' },
+          body: JSON.stringify({ customFields: [{ id: GHL_FIELD_WATCH_MINS, value: String(minutesWatched) }] })
+        }).catch(() => {});
+      }
+
+    } catch (e) { /* silent fail */ }
+  }
+
+  // === UTM RECOVERY ===
+  const utms = {};
+  const utmKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+  const urlParams = new URLSearchParams(window.location.search);
+  utmKeys.forEach(k => {
+    const v = urlParams.get(k) || sessionStorage.getItem(k);
+    if (v) utms[k] = v;
+  });
+
+  // === CAPI CUSTOM EVENT ===
+  function fireEngagementEvent(eventName) {
+    const eventId = eventName + '_' + Date.now();
+
+    // Pixel
+    fbq('trackCustom', eventName, { content_name: 'Endgame Training Page' }, { eventID: eventId });
+
+    // CAPI
+    fetch(`https://graph.facebook.com/v19.0/${PIXEL_ID}/events?access_token=${CAPI_TOKEN}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        data: [{
+          event_name: eventName,
+          event_time: Math.floor(Date.now() / 1000),
+          event_id: eventId,
+          event_source_url: window.location.href,
+          action_source: 'website',
+          custom_data: {
+            content_name: 'Endgame Training Page',
+            ...utms
+          }
+        }]
+      })
+    }).catch(() => {});
+  }
+
+  // === TIME-ON-PAGE MILESTONES ===
+  const leadEmail = sessionStorage.getItem('lead_email') || '';
+
+  const milestones = [
+    { seconds: 180, name: 'TrainingEngaged_3min',  mins: 3,  tag: 'training-3min'  },
+    { seconds: 360, name: 'TrainingEngaged_6min',  mins: 6,  tag: 'training-6min'  },
+    { seconds: 600, name: 'TrainingEngaged_10min', mins: 10, tag: 'training-warm'  }
+  ];
+
+  milestones.forEach(({ seconds, name, mins, tag }) => {
+    setTimeout(() => {
+      fireEngagementEvent(name);
+      ghlUpdateContact(leadEmail, mins, tag); // update GHL contact record
+    }, seconds * 1000);
+  });
+
+  // === TIMER ===
+  const TIMER_SECONDS = 570; // 9 minutes 30 seconds
+  let remaining = TIMER_SECONDS;
+
+  const display = document.getElementById('countdownDisplay');
+  const countdownState = document.getElementById('countdownState');
+  const ctaState = document.getElementById('ctaState');
+
+  function formatTime(s) {
+    const m = Math.floor(s / 60);
+    const sec = s % 60;
+    return `${m}:${sec.toString().padStart(2, '0')}`;
+  }
+
+  function tick() {
+    remaining--;
+    if (remaining <= 0) {
+      // Swap states
+      countdownState.style.display = 'none';
+      ctaState.style.display = 'flex';
+    } else {
+      display.textContent = formatTime(remaining);
+      setTimeout(tick, 1000);
+    }
+  }
+
+  // Start
+  display.textContent = formatTime(remaining);
+  setTimeout(tick, 1000);
+
+  // === SOFT GATE ===
+  const overlay = document.getElementById('gateOverlay');
+  const alreadyOptedIn = sessionStorage.getItem('opted_in');
+
+  if (!alreadyOptedIn) {
+    // Show gate after 2s — enough time to see the page, not enough to watch
+    setTimeout(() => overlay.classList.add('active'), 2000);
+  }
+
+  // Gate form submit
+  document.getElementById('gateSubmit').addEventListener('click', async () => {
+    const email = document.getElementById('gateEmail').value.trim();
+    const name = document.getElementById('gateName').value.trim() || 'subscriber';
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      document.getElementById('gateEmail').style.borderColor = 'rgba(239,68,68,0.6)';
+      document.getElementById('gateEmail').focus();
+      return;
+    }
+
+    const btn = document.getElementById('gateSubmit');
+    btn.textContent = 'Loading…';
+    btn.disabled = true;
+
+    // Hash + fire Lead
+    const eventId = 'lead_gate_' + Date.now();
+    const [hashedEmail, hashedName] = await Promise.all([sha256(email), sha256(name)]);
+
+    fbq('track', 'Lead', { content_name: 'Endgame Training Gate' }, { eventID: eventId });
+
+    fetch(`https://graph.facebook.com/v19.0/${PIXEL_ID}/events?access_token=${CAPI_TOKEN}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        data: [{
+          event_name: 'Lead',
+          event_time: Math.floor(Date.now() / 1000),
+          event_id: eventId,
+          event_source_url: window.location.href,
+          action_source: 'website',
+          user_data: { em: [hashedEmail], fn: [hashedName] },
+          custom_data: { content_name: 'Endgame Training Gate', ...utms }
+        }]
+      })
+    }).catch(() => {});
+
+    sessionStorage.setItem('opted_in', '1');
+    sessionStorage.setItem('lead_email', email);
+
+    // GHL contact for direct landers
+    fetch('https://services.leadconnectorhq.com/contacts/upsert', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${GHL_TOKEN}`,
+        'Version': '2021-07-28',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        locationId: GHL_LOC,
+        email,
+        firstName: name !== 'subscriber' ? name : undefined,
+        tags: ['opted-in', 'direct-landing'],
+        source: 'Training Page Gate'
+      })
+    }).catch(() => {});
+
+    overlay.classList.remove('active');
+  });
+
+  // === BUY BUTTON — tag contact as purchase-initiated on click ===
+  document.getElementById('buyBtn').addEventListener('click', () => {
+    const email = sessionStorage.getItem('lead_email');
+    if (!email) return;
+    // Fire pixel InitiateCheckout
+    fbq('track', 'InitiateCheckout', { value: 397, currency: 'USD', content_name: 'Endgame AI Video' });
+    // Tag in GHL as purchase-initiated (async, don't block navigation)
+    ghlUpdateContact(email, null, 'purchase-initiated');
+  });
+
+  // Skip button — trust them
+  document.getElementById('gateSkip').addEventListener('click', () => {
+    sessionStorage.setItem('opted_in', '1');
+    overlay.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
