@@ -289,18 +289,110 @@
     </div>
   </div>
 
-  <!-- Calendar -->
+  <!-- Booking form -->
   <section class="calendar-section">
     <h2>Book Your Onboarding Call</h2>
-    <p class="sub">60 minutes · 1-on-1 with Oriel · Pick any open slot below</p>
-    <div class="calendar-wrap">
-      <iframe
-        src="https://api.leadconnectorhq.com/widget/bookings/rV4Rm8SsQLJ3pU4pO7Er"
-        title="Book Your Onboarding Call"
-        loading="lazy"
-      ></iframe>
+    <p class="sub">60 minutes · 1-on-1 with Oriel · Tell us when you're free and we'll confirm within a few hours</p>
+    <div class="calendar-wrap" style="padding: 40px 36px;">
+      <div id="bookingForm">
+        <div style="display:grid; gap:16px; max-width:520px; margin: 0 auto;">
+          <div>
+            <label style="display:block; font-size:0.8rem; font-weight:600; letter-spacing:0.08em; color:rgba(255,255,255,0.5); text-transform:uppercase; margin-bottom:8px;">Your Name</label>
+            <input id="bName" type="text" placeholder="First name" style="width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:14px 16px; color:#fff; font-size:1rem; outline:none; font-family:inherit;">
+          </div>
+          <div>
+            <label style="display:block; font-size:0.8rem; font-weight:600; letter-spacing:0.08em; color:rgba(255,255,255,0.5); text-transform:uppercase; margin-bottom:8px;">Email</label>
+            <input id="bEmail" type="email" placeholder="your@email.com" style="width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:14px 16px; color:#fff; font-size:1rem; outline:none; font-family:inherit;">
+          </div>
+          <div>
+            <label style="display:block; font-size:0.8rem; font-weight:600; letter-spacing:0.08em; color:rgba(255,255,255,0.5); text-transform:uppercase; margin-bottom:8px;">Your Time Zone</label>
+            <select id="bTz" style="width:100%; background:#1a1a1a; border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:14px 16px; color:#fff; font-size:1rem; outline:none; font-family:inherit; appearance:none;">
+              <option value="">Select your timezone</option>
+              <option value="ET">Eastern (ET)</option>
+              <option value="CT">Central (CT)</option>
+              <option value="MT">Mountain (MT)</option>
+              <option value="PT">Pacific (PT)</option>
+              <option value="GMT">GMT / UK</option>
+              <option value="CET">Central Europe (CET)</option>
+              <option value="IST">Israel (IST)</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block; font-size:0.8rem; font-weight:600; letter-spacing:0.08em; color:rgba(255,255,255,0.5); text-transform:uppercase; margin-bottom:8px;">3 Times That Work For You</label>
+            <textarea id="bTimes" placeholder="e.g. Monday 10am, Tuesday 2pm, Thursday morning..." rows="3" style="width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:14px 16px; color:#fff; font-size:1rem; outline:none; font-family:inherit; resize:none;"></textarea>
+          </div>
+          <div>
+            <label style="display:block; font-size:0.8rem; font-weight:600; letter-spacing:0.08em; color:rgba(255,255,255,0.5); text-transform:uppercase; margin-bottom:8px;">What are you selling / promoting?</label>
+            <input id="bNiche" type="text" placeholder="Skincare brand, roofing company, SaaS..." style="width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:14px 16px; color:#fff; font-size:1rem; outline:none; font-family:inherit;">
+          </div>
+          <button id="bSubmit" onclick="submitBooking()" style="width:100%; padding:18px; background:linear-gradient(135deg,#7c3aed,#a855f7); border:none; border-radius:12px; color:#fff; font-size:1.05rem; font-weight:700; cursor:pointer; font-family:inherit; letter-spacing:0.02em;">
+            Request My Onboarding Call →
+          </button>
+          <p style="text-align:center; font-size:0.8rem; color:rgba(255,255,255,0.3);">Oriel will confirm a time within a few hours.</p>
+        </div>
+      </div>
+      <div id="bookingThanks" style="display:none; text-align:center; padding:40px 20px;">
+        <div style="font-size:2.5rem; margin-bottom:16px;">✅</div>
+        <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2rem; margin-bottom:10px;">You're on the list.</h3>
+        <p style="color:rgba(255,255,255,0.6); font-size:1rem; line-height:1.6;">Oriel will email you at the address you provided to confirm your slot. Check your inbox (and spam just in case).</p>
+      </div>
     </div>
   </section>
+
+  <script>
+  async function submitBooking() {
+    const name   = document.getElementById('bName').value.trim();
+    const email  = document.getElementById('bEmail').value.trim();
+    const tz     = document.getElementById('bTz').value;
+    const times  = document.getElementById('bTimes').value.trim();
+    const niche  = document.getElementById('bNiche').value.trim();
+    const btn    = document.getElementById('bSubmit');
+
+    if (!name || !email || !times) {
+      alert('Please fill in your name, email, and preferred times.');
+      return;
+    }
+
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    const GHL_TOKEN = 'pit-0cefae17-b065-44da-959f-ef41333bab4e';
+    const GHL_LOC   = 'bNQj4Ti60XKt9BqMiCPE';
+
+    try {
+      // Upsert contact with booking request note
+      const upsert = await fetch('https://services.leadconnectorhq.com/contacts/upsert', {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${GHL_TOKEN}`, 'Version': '2021-07-28', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          locationId: GHL_LOC,
+          email,
+          firstName: name,
+          tags: ['purchased', 'booking-requested'],
+          customFields: [{ id: 'NFr52diVw2eM7QpYXy4Y', value: `TZ: ${tz} | Times: ${times} | Niche: ${niche}` }]
+        })
+      });
+      const { contact } = await upsert.json();
+
+      // Add a note to the contact
+      if (contact?.id) {
+        await fetch(`https://services.leadconnectorhq.com/contacts/${contact.id}/notes`, {
+          method: 'POST',
+          headers: { 'Authorization': `Bearer ${GHL_TOKEN}`, 'Version': '2021-07-28', 'Content-Type': 'application/json' },
+          body: JSON.stringify({ body: `ONBOARDING BOOKING REQUEST\nTimezone: ${tz}\nPreferred times: ${times}\nProduct/niche: ${niche}` })
+        });
+      }
+
+      document.getElementById('bookingForm').style.display = 'none';
+      document.getElementById('bookingThanks').style.display = 'block';
+    } catch(e) {
+      btn.textContent = 'Request My Onboarding Call →';
+      btn.disabled = false;
+      alert('Something went wrong. Please email oriel@endgameaivideo.com directly.');
+    }
+  }
+  </script>
 
   <!-- Course access note -->
 
