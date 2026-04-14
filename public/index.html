@@ -1010,7 +1010,7 @@ src="https://www.facebook.com/tr?id=2159928257879426&ev=PageView&noscript=1"/></
     }).catch(() => {}); // silent fail — never block UX
 
     // 3. Build training page URL with UTMs carried forward
-    const trainingUrl = new URL('training.html', window.location.href);
+    const trainingUrl = new URL('/training', window.location.href);
     Object.entries(utms).forEach(([k, v]) => trainingUrl.searchParams.set(k, v));
 
     // Mark as opted in so training page skips the gate
