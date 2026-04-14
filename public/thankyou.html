@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're In — Endgame AI Video</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- FB Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2159928257879426');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2159928257879426&ev=PageView&noscript=1"/></noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #a855f7;
+      --purple-dark: #7c3aed;
+      --bg: #000;
+      --bg2: #0a0a0a;
+      --bg3: #111;
+      --text: rgba(255,255,255,0.92);
+      --text-muted: rgba(255,255,255,0.55);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Top bar ── */
+    .top-bar {
+      background: linear-gradient(90deg, #7c3aed, #a855f7, #7c3aed);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #fff;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 70px 24px 50px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(168,85,247,0.15);
+      border: 1px solid rgba(168,85,247,0.4);
+      color: var(--purple);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 9vw, 6rem);
+      line-height: 0.95;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #a855f7, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero .subhead {
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
+
+    /* ── Surprise box ── */
+    .surprise-box {
+      background: linear-gradient(135deg, rgba(168,85,247,0.12), rgba(124,58,237,0.08));
+      border: 1px solid rgba(168,85,247,0.35);
+      border-radius: 20px;
+      padding: 40px 36px;
+      max-width: 720px;
+      margin: 0 auto 60px;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .surprise-box::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(168,85,247,0.2), transparent 70%);
+      pointer-events: none;
+    }
+
+    .surprise-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--purple);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .surprise-label::before {
+      content: '★';
+      font-size: 0.9rem;
+    }
+
+    .surprise-box h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .surprise-box p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .surprise-box p strong {
+      color: #fff;
+    }
+
+    .what-happens {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .what-happens-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .what-happens-item .icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(168,85,247,0.2);
+      border: 1px solid rgba(168,85,247,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .what-happens-item p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ── Calendar section ── */
+    .calendar-section {
+      max-width: 820px;
+      margin: 0 auto 80px;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .calendar-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .calendar-section .sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    .calendar-wrap {
+      background: var(--bg3);
+      border: 1px solid rgba(168,85,247,0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 600px;
+    }
+
+    .calendar-wrap iframe {
+      width: 100%;
+      border: none;
+      min-height: 700px;
+      display: block;
+    }
+
+    /* ── Access note ── */
+    .access-note {
+      max-width: 600px;
+      margin: 0 auto 80px;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .access-note .card {
+      background: var(--bg2);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 28px 32px;
+    }
+
+    .access-note h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .access-note p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .access-note p a {
+      color: var(--purple);
+      text-decoration: none;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.25);
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .surprise-box { padding: 28px 22px; }
+      .hero { padding: 50px 20px 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">🔒 Your purchase is confirmed — check your email for receipt</div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="badge">Founding Member</div>
+    <h1>You're <span>in.</span><br>And there's a surprise.</h1>
+    <p class="subhead">Payment confirmed. But before you get access — you need to see what just happened.</p>
+  </section>
+
+  <!-- Surprise box -->
+  <div style="padding: 0 24px;">
+    <div class="surprise-box">
+      <div class="surprise-label">Founding Member Bonus — Not Advertised</div>
+      <h2>You're getting the entire program.<br>Live. With me. One-on-one.</h2>
+      <p>
+        The first <strong>5 people</strong> to buy don't just get the course. They get me.<br><br>
+        I'm going to walk you through the entire system — your character, your first ad, your batch pipeline — in a <strong>live 60-minute session</strong>. You'll leave with a working character and a finished ad. Not eventually. That day.<br><br>
+        This call is also how I'm building the course modules. You're not a beta tester. You're a co-creator. And you'll never pay for updates.
+      </p>
+      <div class="what-happens">
+        <div class="what-happens-item">
+          <div class="icon">1</div>
+          <p><strong>Book below</strong> — pick any time that works for you.</p>
+        </div>
+        <div class="what-happens-item">
+          <div class="icon">2</div>
+          <p><strong>Show up with a product or niche in mind.</strong> Anything works — ecom, service biz, whatever.</p>
+        </div>
+        <div class="what-happens-item">
+          <div class="icon">3</div>
+          <p><strong>We build your first character and your first ad together.</strong> You leave with working output, not homework.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calendar -->
+  <section class="calendar-section">
+    <h2>Book Your Onboarding Call</h2>
+    <p class="sub">60 minutes · 1-on-1 with Oriel · Pick any open slot below</p>
+    <div class="calendar-wrap">
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/bookings/rV4Rm8SsQLJ3pU4pO7Er"
+        title="Book Your Onboarding Call"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Course access note -->
+  <section class="access-note">
+    <div class="card">
+      <h3>What about course access?</h3>
+      <p>You'll receive a separate email with your login details within 24 hours. If you don't see it, check spam or reply to your purchase receipt and we'll get you sorted immediately.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Endgame AI Video · <a href="https://endgameaivideo.com" style="color:rgba(255,255,255,0.3);text-decoration:none;">endgameaivideo.com</a>
+  </footer>
+
+</body>
+</html>
