@@ -1,13 +1,13 @@
 const stripe = require('stripe');
 const crypto = require('crypto');
 
-// ── Config ────────────────────────────────────────────────────────────────────
-const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY || 'REDACTED_STRIPE_KEY';
-const WEBHOOK_SECRET    = process.env.STRIPE_WEBHOOK_SECRET || 'whsec_OA1wQxGCTYAA6Iw7JUNvRliyVGnO6l41';
-const PIXEL_ID          = process.env.FB_PIXEL_ID || '2159928257879426';
-const CAPI_TOKEN        = process.env.FB_CAPI_TOKEN || 'EAAU9JykAMVQBRJ0nKMAUjw8SvN5zhmpzbDbQuYZCCCZC5AUNlvPzQx6GNQP3WoBukTtpjaIABsL9fi6vHh6ZBBJOBFLMervveECreSBSeZBi2pKzlwwX3eaPv6olGZCCxlwmT1udZB6ZBCOmqHvxgK1kNiRnZBJ0rVkr5db1ZA3HbcAlMTuQIJ2EjGfYlbqs3Cxj9XwZDZD';
-const GHL_TOKEN         = process.env.GHL_TOKEN || 'pit-0cefae17-b065-44da-959f-ef41333bab4e';
-const GHL_LOC           = process.env.GHL_LOCATION_ID || 'bNQj4Ti60XKt9BqMiCPE';
+// ── Config — all secrets via Vercel env vars, no hardcoded fallbacks ──────────
+const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
+const WEBHOOK_SECRET    = process.env.STRIPE_WEBHOOK_SECRET;
+const PIXEL_ID          = process.env.FB_PIXEL_ID;
+const CAPI_TOKEN        = process.env.FB_CAPI_TOKEN;
+const GHL_TOKEN         = process.env.GHL_TOKEN;
+const GHL_LOC           = process.env.GHL_LOCATION_ID;
 // ─────────────────────────────────────────────────────────────────────────────
 
 module.exports = async (req, res) => {
